@@ -3,11 +3,11 @@ package com.musarana.app.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.musarana.app.entity.ModoDeUso;
-import com.musarana.app.entity.Productos;
 import com.musarana.app.repository.IModoDeUsoRepository;
-
+@Service
 public class ModoDeUsoServiceImp implements IModoDeUsoService{
 	@Autowired
 	IModoDeUsoRepository modoDeUsoRepository;

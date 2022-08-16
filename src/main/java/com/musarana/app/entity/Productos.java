@@ -23,16 +23,17 @@ public class Productos implements Serializable {
 	private Float  precio;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	@Column(name="id_modo_de_uso")
-	private ModoDeUso idmodoDeUso;
-	@Column(name="id_categoria")
-	private Integer idCategoria;
+	private ModoDeUso modoDeUso;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Categoria categoria;
 	@Column(name="inventario")
 	private Integer inventario;
 	@Column(name="ingredientes")
 	private String ingredientes;
-	@Column(name="id_presentacion")
-	private Integer idPresentacion;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Presentacion presentacion;
 	@Column(name="descripcion")
 	private String descripcion;
 
@@ -52,15 +53,15 @@ public class Productos implements Serializable {
 	 * @param número de la Presentación
 	 * @param descripción
 	 */
-	public Productos(String sku, String nombreProducto, Float precio, ModoDeUso idmodoDeUso, Integer idCategoria, Integer inventario, String ingredientes, Integer idPresentacion, String descripcion) {
+	public Productos(String sku, String nombreProducto, Float precio, ModoDeUso modoDeUso, Categoria categoria, Integer inventario, String ingredientes, Presentacion presentacion, String descripcion) {
 	this.sku=sku;
 	this.nombreProducto=nombreProducto;
 	this.precio=precio;
-	this.idmodoDeUso=idmodoDeUso;
-	this.idCategoria=idCategoria;
+	this.modoDeUso=modoDeUso;
+	this.categoria=categoria;
 	this.inventario=inventario;
 	this.ingredientes=ingredientes;
-	this.idPresentacion=idPresentacion;
+	this.presentacion=presentacion;
 	this.descripcion=descripcion;
 	}
 }
