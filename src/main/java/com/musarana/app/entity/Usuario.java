@@ -3,6 +3,9 @@ import java.io.Serializable;
 import java.sql.Date;
 
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.Data;
 
 @Entity
@@ -27,5 +30,9 @@ public class Usuario implements Serializable {
 	private String metodoPago;
 	@Column(name="rol")
 	private String rol;
+	@ManyToOne(fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Direccion direccion;
+	
 	
 }
