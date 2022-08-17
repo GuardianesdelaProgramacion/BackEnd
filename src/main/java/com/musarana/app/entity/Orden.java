@@ -2,12 +2,9 @@ package com.musarana.app.entity;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Data;
 
@@ -23,4 +20,9 @@ public class Orden implements Serializable {
 	private Integer cantidad;
 	@Column (name="total_orden")
 	private Float totalOrden;
+	@ManyToOne (fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private Usuario usuario;
+	
+
 }

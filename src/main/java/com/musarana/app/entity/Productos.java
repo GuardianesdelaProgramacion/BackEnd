@@ -43,39 +43,14 @@ public class Productos implements Serializable {
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private List<ImagenProducto> imagenproducto;
-
+	@ManyToMany (fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private List<Orden> orden;
+	
+	
 	public Productos() {
 		
 	}
 
-//	/**
-//	 * 
-//	 * @param sku
-//	 * @param nombreProducto
-//	 * @param precio
-//	 * @param número del Modo De Uso
-//	 * @param número de la Categoría
-//	 * @param inventario
-//	 * @param ingredientes
-//	 * @param número de la Presentación
-//	 * @param descripción
-//	 */
-	public Productos(Long idProductos, String sku, String nombreProducto, Float precio, ModoDeUso modoDeUso,
-			Categoria categoria, Integer inventario, String ingredientes, Presentacion presentacion, String descripcion,
-			List<Seccion> seccion, List<ImagenProducto> imagenproducto) {
-		super();
-		this.idProductos = idProductos;
-		this.sku = sku;
-		this.nombreProducto = nombreProducto;
-		this.precio = precio;
-		this.modoDeUso = modoDeUso;
-		this.categoria = categoria;
-		this.inventario = inventario;
-		this.ingredientes = ingredientes;
-		this.presentacion = presentacion;
-		this.descripcion = descripcion;
-		this.seccion = seccion;
-		this.imagenproducto = imagenproducto;
-	}
 }
 
