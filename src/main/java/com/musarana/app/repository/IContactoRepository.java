@@ -1,5 +1,9 @@
 package com.musarana.app.repository;
 
-public interface IContactoRepository {
+import org.springframework.data.repository.CrudRepository;
+
+import com.musarana.app.entity.Contacto;
+
+public interface IContactoRepository extends CrudRepository<Contacto, Long>{
 
 }
