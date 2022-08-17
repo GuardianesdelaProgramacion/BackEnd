@@ -17,6 +17,9 @@ public class ModoDeUso implements Serializable {
 	private Long idmodoDeUso;
 	@Column (name="modo_de_Uso")
 	private String modoDeUso;
+	public ModoDeUso() {
+		
+	}
 	/**
 	 * 
 	 * @param la descripciónde Modo De Uso  
