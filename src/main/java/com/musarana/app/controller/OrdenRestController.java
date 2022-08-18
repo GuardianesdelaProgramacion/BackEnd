@@ -3,57 +3,44 @@ package com.musarana.app.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.musarana.app.entity.Orden;
 import com.musarana.app.service.IOrdenService;
-@CrossOrigin(origins="*")
+
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping(path="/api")
+@RequestMapping(path = "/api")
 public class OrdenRestController {
 	@Autowired
-<<<<<<< HEAD:src/main/java/com/musarana/app/controller/OrdenRestController.java
 	IOrdenService ordenService;
+
 	@GetMapping("/orden")
 	public List <Orden> orden(){
 		return ordenService.findAllOrden();
-=======
-	IDireccionService direccionService;
-	
-	@GetMapping("/direccion")
-	public List <Direccion> direccion(){
-		return direccionService.findAllDireccion();
 	}
 
-	@GetMapping("/direccion/{id}")
-	public Direccion direccionById(@PathVariable Long id) {		
-		return direccionService.findDireccionbyId(id);
+	@GetMapping("/orden/{id}")
+	public Orden ordenById(@PathVariable Long id) {		
+		return ordenService.findOrdenbyId(id);
 	}
 	
-	@PostMapping("/direccion")
-	public Direccion newDireccion(@RequestBody Direccion direccion) {
-		direccion.setIdDireccion(null);
-		return direccionService.saveDireccion(direccion);
+	@PostMapping("/orden")
+	public Orden newOrden(@RequestBody Orden orden) {
+		orden.setIdOrden(null);
+		return ordenService.saveOrden(orden);
 	}
 	
-	@PutMapping("/direccion")
-	public Direccion replaceDireccion(@RequestBody Direccion direccion) {
+	@PutMapping("/orden")
+	public Orden replaceOrden(@RequestBody Orden orden) {
 		//Filtros para asegurar que esté un ID y exista
-		return direccionService.saveDireccion(direccion);
+		return ordenService.saveOrden(orden);
 	}
 	
-	@DeleteMapping("direccion/{id}")
-	public Direccion byeDireccion(@PathVariable Long id) {
-		return direccionService.deleteDireccionById(id);
+	@DeleteMapping("orden/{id}")
+	public Orden byeOrden(@PathVariable Long id) {
+		return ordenService.deleteOrdenById(id);
 	}
->>>>>>> entityproductos:src/main/java/com/musarana/app/controller/DireccionRestController.java
 }
-}	
+		
+	

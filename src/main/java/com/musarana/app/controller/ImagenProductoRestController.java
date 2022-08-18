@@ -34,7 +34,7 @@ public class ImagenProductoRestController {
 	}
 	
 	@PostMapping("/imgproducto")
-	public ImagenProducto newCustomer(@RequestBody ImagenProducto imagenproducto) {
+	public ImagenProducto newImagenProducto(@RequestBody ImagenProducto imagenproducto) {
 		imagenproducto.setIdImagenProducto(null);
 		return imagenproductoService.saveImagenProducto(imagenproducto);
 	}

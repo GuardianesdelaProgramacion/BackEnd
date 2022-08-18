@@ -25,7 +25,7 @@ public class EstadoRestController {
 	IEstadoService estadoService;
 	
 	@GetMapping("/estado")
-	public List<Estado> modoDeUso(){
+	public List<Estado> estado(){
 		return estadoService.findAllEstado();
 	}
 	

@@ -33,13 +33,13 @@ public class BlogRestController {
 	}
 	
 	@PostMapping("/blog")
-	public Blog newCustomer(@RequestBody Blog blog) {
+	public Blog newBlog(@RequestBody Blog blog) {
 		blog.setIdBlog(null);
 		return blogService.saveBlog(blog);
 	}
 	
 	@PutMapping("/blog")
-	public Blog replaceCustomer(@RequestBody Blog blog) {
+	public Blog replaceBlog(@RequestBody Blog blog) {
 		//Filtros para asegurar que esté un ID y exista
 		return blogService.saveBlog(blog);
 	}

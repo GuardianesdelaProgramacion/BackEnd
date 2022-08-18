@@ -28,18 +28,18 @@ public class CategoriaRestController {
 	}
 	
 	@GetMapping("/categoria/{id}")
-	public Categoria blogById(@PathVariable Long id) {		
+	public Categoria categoriaById(@PathVariable Long id) {		
 		return categoriaService.findCategoriabyId(id);
 	}
 	
 	@PostMapping("/categoria")
-	public Categoria newCustomer(@RequestBody Categoria categoria) {
+	public Categoria newCategoria(@RequestBody Categoria categoria) {
 		categoria.setIdCategoria(null);
 		return categoriaService.saveCategoria(categoria);
 	}
 	
 	@PutMapping("/categoria")
-	public Categoria replaCategoria(@RequestBody Categoria categoria) {
+	public Categoria replaceCategoria(@RequestBody Categoria categoria) {
 		//Filtros para asegurar que esté un ID y exista
 		return categoriaService.saveCategoria(categoria);
 	}

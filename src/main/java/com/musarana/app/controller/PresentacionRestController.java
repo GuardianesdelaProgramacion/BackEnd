@@ -22,6 +22,7 @@ import com.musarana.app.service.IPresentacionService;
 public class PresentacionRestController {
 	@Autowired
 	IPresentacionService presentacionService;
+	
 	@GetMapping("/presentacion")
 	public List <Presentacion> presentacion(){
 		return presentacionService.findAllPresentacion();
@@ -39,7 +40,7 @@ public class PresentacionRestController {
 	}
 	
 	@PutMapping("/presentacion")
-	public Presentacion replaPresentacion(@RequestBody Presentacion presentacion) {
+	public Presentacion replacePresentacion(@RequestBody Presentacion presentacion) {
 		//Filtros para asegurar que esté un ID y exista
 		return presentacionService.savePresentacion(presentacion);
 	}
