@@ -35,9 +35,10 @@ public class SeccionRestController {
 
 	@PostMapping("/seccion")
 	public Seccion newSeccion(@RequestBody Seccion seccion) {
-		seccion.setSeccion(null);
+		seccion.setIdSeccion(null);
 		return seccionService.saveSeccion(seccion);
 	}
+	
 
 	@PutMapping("/seccion")
 	public Seccion replaceSeccion(@RequestBody Seccion seccion) {
