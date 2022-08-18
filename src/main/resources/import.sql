@@ -2,7 +2,7 @@
 INSERT INTO  musarana_db.categoria (`categoria`) VALUES ('Cabello'), ('Cuerpo'), ('Cuidado dental'), ('Protección Solar'), ('Cara');
 /*****SECCION*****/
 INSERT INTO musarana_db.seccion (seccion) VALUES ('Todos los productos'),('Más vendidos'), ('Carrusel'), ('Búsqueda'), ('Banner'), ('Descuentos');
-/*****MODO DE USO ****/
+/*****MODO DE USO *****/
 INSERT INTO musarana_db.modo_de_uso (`modo_de_uso`) VALUES ('FROTAR LA BARRA HÚMEDA EN LAS MANOS Y USAR LA ESPUMA RESULTANTE PARA LAVAR EL CABELLO.'), ('FROTAR LA BARRA EN LAS MANOS O DIRECTAMENTE SOBRE EL CABELLO DE MEDIAS A PUNTAS.'), ('FROTAR LA BARRA SOBRE LA ZONA DESEADA Y ESPARCIR EL PRODUCTO CON LAS MANOS.'),('HUMEDECE TU CEPILLO Y FRÓTALO SOBRE LA TABLETA, CEPILLA COMO DE COSTUMBRE Y ENJUAGA CON AGUA.'),('FROTAR LA BARRA SOBRE LA ZONA DESEADA Y ESPARCIR EL PRODUCTO CON LAS MANOS.'),('USAR UNA GOTA DE PRODUCTO Y DAR UN LIGERO MASAJE SOBRE LA ZONA DESEADA');
 /*****PRESENTACIÓN*****/
 INSERT INTO musarana_db.presentacion (`presentacion`) VALUES ('Chico'), ('Grande');
