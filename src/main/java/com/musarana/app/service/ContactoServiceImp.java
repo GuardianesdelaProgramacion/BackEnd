@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.musarana.app.entity.Contacto;
-import com.musarana.app.entity.Usuario;
 import com.musarana.app.repository.IContactoRepository;
 @Service
 public class ContactoServiceImp implements IContactoService{
