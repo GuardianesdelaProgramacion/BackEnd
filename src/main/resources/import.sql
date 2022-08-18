@@ -7,7 +7,7 @@ INSERT INTO musarana_db.modo_de_uso (`modo_de_uso`) VALUES ('FROTAR LA BARRA HÚ
 /*****PRESENTACIÓN*****/
 INSERT INTO musarana_db.presentacion (`presentacion`) VALUES ('Chico'), ('Grande');
 /*****IMAGEN PRODUCTO*****/
-NSERT INTO musarana_db.imagen_producto (imagen) VALUES ('https://i.ibb.co/0mYYDGn/S001-2.jpg'), ('https://i.ibb.co/GtVyW49/S001-3.jpg');
+INSERT INTO musarana_db.imagen_producto (imagen) VALUES ('https://i.ibb.co/0mYYDGn/S001-2.jpg'), ('https://i.ibb.co/GtVyW49/S001-3.jpg');
 /*****ESTADO*****/
 INSERT INTO musarana_db.estado (estado) VALUES ('Aguascalientes'), ('Baja California'), ('Baja California Sur'), ('Campeche'), ('Ciudad de Mèxico'), ('Chiapas'), ('Chihuahua'), ('Coahuila de Zaragoza'), ('Colima'), ('Durango'), ('Guanajuato'), ('Guerrero'), ('Hidalgo'), ('Jalisco'), ('México'), ('Michoacán de Ocampo'), ('Morelos'), ('Nayarit'), ('Nuevo León'), ('Oaxaca de Juárez'), ('Puebla'), ('Querétaro'), ('Quintana Roo'), ('San Luis Potosí'), ('Sinaloa'), ('Sonora'), ('Tabasco'), ('Tamaulipas'), ('Tlaxcala'), ('Veracruz de Ignacio de la Llave'), ('Yucatán'), ('Zacatecas');
 /*****BLOG*****/
