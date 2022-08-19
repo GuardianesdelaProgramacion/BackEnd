@@ -1,6 +1,7 @@
 package com.musarana.app.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -23,6 +24,9 @@ public class Orden implements Serializable {
 	@ManyToOne (fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Usuario usuario;
+	@ManyToMany (fetch=FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private List<Productos> productos;
 	
 
 }

@@ -20,13 +20,13 @@ public class Blog implements Serializable {
 	private Long idBlog;
     @Column(name="fecha")
 	private Date fecha; 
-	@Column (name="contenido")
+	@Column (name="contenido", length=1800)
 	private String contenido;
 	@Column (name="categoria_blog")
 	private String categoriaBlog;
 	@Column (name="titulo")
 	private String titulo;
-	@Column (name="resumen")
+	@Column (name="resumen", length=1000)
 	private String resumen;
 	
 

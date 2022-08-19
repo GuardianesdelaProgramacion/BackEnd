@@ -30,12 +30,12 @@ public class Productos implements Serializable {
 	private Categoria categoria;
 	@Column(name="inventario")
 	private Integer inventario;
-	@Column(name="ingredientes")
+	@Column(name="ingredientes", length=1000)
 	private String ingredientes;
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private Presentacion presentacion;
-	@Column(name="descripcion")
+	@Column(name="descripcion",length=1000)
 	private String descripcion;
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -43,9 +43,7 @@ public class Productos implements Serializable {
 	@ManyToMany(fetch=FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private List<ImagenProducto> imagenproducto;
-	@ManyToMany (fetch=FetchType.LAZY)
-	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-	private List<Orden> orden;
+	
 	
 	
 	public Productos() {

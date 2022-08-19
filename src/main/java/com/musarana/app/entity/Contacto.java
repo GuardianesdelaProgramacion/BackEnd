@@ -15,10 +15,10 @@ public class Contacto implements Serializable{
 	@Column (name="nombre_cn")
 	private String nombrecn;
 	@Column (name="asunto_cn")
-	private String astuntocn;
+	private String asuntocn;
 	@Column(name="telefono_cn")
-	private Integer telefonocn;
-	@Column(name="comentario")
+	private Long telefonocn;
+	@Column(name="comentario",length=1000)
 	private String comentario;
 
 

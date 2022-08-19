@@ -23,9 +23,15 @@ public class Direccion implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idDireccion;
-	@Column(name="colonia")
+	@Column (name="nombre")
+	private String nombre;
+	@Column (name="apellidos")
+	private String apellidos;
+	@Column(name="calle_no_ext_no_int", length=1000)
+	private String calleyNumeros;
+	@Column(name="colonia", length=1000)
 	private String colonia;
-	@Column(name="municipio")
+	@Column(name="municipio", length=1000)
 	private String municipio;
 	@Column(name="codigo_postal")
 	private String codigoPostal;

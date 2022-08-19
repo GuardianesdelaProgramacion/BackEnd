@@ -33,7 +33,6 @@ public class ContactoServiceImp implements IContactoService{
 
 	@Override
 	public Contacto findContactobyId(Long id) {
-		// TODO Auto-generated method stub
 		return contactoRepository.findById(id).orElse(null);
 	}
 

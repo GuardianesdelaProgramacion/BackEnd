@@ -25,7 +25,7 @@ public class Usuario implements Serializable {
 	@Column (name="fecha_nacimiento")
 	private Date fechaNacimiento;
 	@Column(name="telefono")
-	private Integer telefono;
+	private Long telefono;
 	@Column(name="metodo_de_pago")
 	private String metodoPago;
 	@Column(name="rol")
